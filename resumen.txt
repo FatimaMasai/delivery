@@ -1,0 +1,40 @@
+Template main.blade.php
+container
+h1 yo soy el template
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/edit', function () {
+    return view('edit');
+});
+
+Route::get('/template', function () {
+    return view('template.main');
+});
+
+container en main es para inyectar contenido
+@yield('contenido') 
+
+
+nos vamos a create
+borramos todo y conectamos con main
+@extends('template.main)
+@section('contenido)
+    h1 bienvenido a mi wiew 2 
+@endsection
+----------------------
+php artisan make:model Cliente
+php artisan make:controller ClienteController --resource
+cls para limpiar terminal
+
+trim borrar espacio en blanco
+
+
+
+yield('contenido)
+
+@extends('layouts.admin')
+@section('contenido')
+@endsection o @stop
